@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "dailyLog": {
+      "title": "Daily Log",
+      "description": "User's daily reflection and record",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" },
+        "mood": { "type": "string" },
+        "diary": { "type": "string" },
+        "score": { "type": "number" },
+        "goodThings": { "type": "array", "items": { "type": "string" } },
+        "difficultThings": { "type": "string" },
+        "tomorrowMemo": { "type": "string" },
+        "photos": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["date", "createdAt"]
+    },
+    "schedule": {
+      "title": "Daily Schedule",
+      "description": "User's school schedule for a day",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" },
+        "periods": { "type": "array", "items": { "type": "string" } },
+        "events": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["date", "periods", "events"]
+    }
+  },
+  "firestore": {
+    "users/{userId}/dailyLogs/{logId}": {
+      "schema": { "$ref": "#/entities/dailyLog" },
+      "description": "User's daily logs"
+    },
+    "users/{userId}/schedule/{dateId}": {
+      "schema": { "$ref": "#/entities/schedule" },
+      "description": "User's daily schedule extracted from PDF"
+    }
+  }
+}

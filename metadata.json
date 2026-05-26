@@ -1,0 +1,6 @@
+{
+  "name": "しぶんノート",
+  "description": "高校生活の自分を残すデジタルノートアプリ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
