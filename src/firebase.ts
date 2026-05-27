@@ -4,10 +4,10 @@ import { getFirestore } from 'firebase/firestore';
 import aiStudioConfig from '../firebase-applet-config.json';
 
 const environmentConfig = {
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.jibun-d879b,
+  appId: import.meta.env.1:1088686861183:web:cf49f3849cdbae8994c84a,
+  apiKey: import.meta.env.AIzaSyAFN-RlhoUlFhHGkKuCmVVR8vCOhlGY0O4,
+  authDomain: import.meta.env.jibun-d879b.firebaseapp.com,
 };
 
 // Vercelなどで環境変数が設定されている場合はそちらを優先し、そうでない場合はAI Studioの設定を利用します
